@@ -232,17 +232,6 @@
   CinderVolumes.create_and_delete_volume:
     -
       args:
-        size: 1
-      runner:
-        type: "constant"
-        times: {{times}}
-        concurrency: {{concurrency}}
-      context:
-        users:
-          tenants: {{tenants}}
-          users_per_tenant: {{users}}
-    -
-      args:
         size:
           min: 1
           max: 5
@@ -297,17 +286,6 @@
   CinderVolumes.create_volume_and_clone:
     -
       args:
-        size: 1
-      runner:
-        type: "constant"
-        times: {{times}}
-        concurrency: {{concurrency}}
-      context:
-        users:
-          tenants: {{tenants}}
-          users_per_tenant: {{users}}
-    -
-      args:
         size:
           min: 1
           max: 5
@@ -325,18 +303,6 @@
           max: {{sla_max_rate}}
 
   CinderVolumes.create_and_list_volume:
-    -
-      args:
-        size: 1
-        detailed: True
-      runner:
-        type: "constant"
-        times: {{times}}
-        concurrency: {{concurrency}}
-      context:
-        users:
-          tenants: {{tenants}}
-          users_per_tenant: {{users}}
     -
       args:
         size:
