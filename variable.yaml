@@ -1,0 +1,11 @@
+--
+# Global Variables which reflect on Load test 
+ times: 1
+ concurrency: 1
+ tenants: 1
+ users: 1
+ glance_image_url: "http://download.cirros-cloud.net/0.3.5/cirros-0.3.5-x86_64-disk.img"
+ glance_image_name: "cirros"
+ flavor_name: "m1.medium"
+ volume_type: ""
+ sla_max_rate: 0
